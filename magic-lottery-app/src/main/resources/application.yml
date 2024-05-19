@@ -1,0 +1,5 @@
+spring:
+  config:
+    name: magic-lottery-app
+  profiles:
+    active: dev
