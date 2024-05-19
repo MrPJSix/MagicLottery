@@ -1,2 +1,1 @@
-# xfg-frame-archetype - DDD 脚手架
-
+# Magic Lottery - 分布式抽奖营销平台
