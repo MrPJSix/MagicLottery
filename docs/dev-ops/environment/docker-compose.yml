@@ -1,4 +1,4 @@
-# 命令执行 docker-compose -f docker-compose-environment.yml up -d
+# 命令执行 docker-compose -f docker-compose.yml up -d
 version: '3.9'
 services:
   mysql:
@@ -52,7 +52,7 @@ services:
 
   # Redis
   redis:
-    image: redis:6.2
+    image: redis:7.2.0
     container_name: redis
     restart: always
     hostname: redis
