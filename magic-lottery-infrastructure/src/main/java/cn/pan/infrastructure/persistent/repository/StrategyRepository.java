@@ -50,7 +50,7 @@ public class StrategyRepository implements IStrategyRepository {
             strategyAwardEntities.add(strategyAwardEntity);
         }
         redisService.setValue(cacheKey, strategyAwardEntities);
-        return Collections.emptyList();
+        return strategyAwardEntities;
     }
 
     @Override
