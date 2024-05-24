@@ -6,7 +6,5 @@ package cn.pan.domain.strategy.service.armory;
  * @date 2024/5/23 15:20
  */
 public interface IStrategyArmory {
-    void assembleLotteryStrategy(Long strategyId);
-
-    Integer getRandomAward(Long strategyId);
+    boolean assembleLotteryStrategy(Long strategyId);
 }
