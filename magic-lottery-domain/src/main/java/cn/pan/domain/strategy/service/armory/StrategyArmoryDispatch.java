@@ -4,6 +4,7 @@ import cn.pan.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.pan.domain.strategy.model.entity.StrategyEntity;
 import cn.pan.domain.strategy.model.entity.StrategyRuleEntity;
 import cn.pan.domain.strategy.repository.IStrategyRepository;
+import cn.pan.types.common.Constants;
 import cn.pan.types.enums.ResponseCode;
 import cn.pan.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
@@ -51,7 +52,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
             List<Integer> ruleWeightValues = ruleWeightValueMap.get(key);
             ArrayList<StrategyAwardEntity> strategyAwardEntitiesCopy = new ArrayList<>(strategyAwardEntities);
             strategyAwardEntitiesCopy.removeIf(entity->!ruleWeightValues.contains(entity.getAwardId()));
-            assembleLotteryStrategy(String.valueOf(strategyId).concat("_").concat(key), strategyAwardEntitiesCopy);
+            assembleLotteryStrategy(String.valueOf(strategyId).concat(Constants.UNDERLINE).concat(key), strategyAwardEntitiesCopy);
         }
 
         return true;
@@ -107,7 +108,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
 
     @Override
     public Integer getRandomAwardId(Long strategyId, String ruleWeightValue) {
-        String key = String.valueOf(strategyId).concat("_").concat(ruleWeightValue);
+        String key = String.valueOf(strategyId).concat(Constants.UNDERLINE).concat(ruleWeightValue);
         Integer rateRange = repository.getRateRange(key);
 
         return repository.getStrategyAwardAssemble(key, new SecureRandom().nextInt(rateRange));

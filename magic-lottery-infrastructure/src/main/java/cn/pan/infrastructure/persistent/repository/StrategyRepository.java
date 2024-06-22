@@ -3,6 +3,7 @@ package cn.pan.infrastructure.persistent.repository;
 import cn.pan.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.pan.domain.strategy.model.entity.StrategyEntity;
 import cn.pan.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.pan.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.pan.domain.strategy.repository.IStrategyRepository;
 import cn.pan.infrastructure.persistent.dao.IStrategyAwardDao;
 import cn.pan.infrastructure.persistent.dao.IStrategyDao;
@@ -100,6 +101,9 @@ public class StrategyRepository implements IStrategyRepository {
         }
         // 从MySQL数据库获取数据
         Strategy strategy = strategyDao.queryStrategyByStrategyId(strategyId);
+        if (strategy == null) {
+            return StrategyEntity.builder().build();
+        }
         strategyEntity = StrategyEntity.builder()
                 .strategyId(strategy.getStrategyId())
                 .strategyDesc(strategy.getStrategyDesc())
@@ -136,5 +140,15 @@ public class StrategyRepository implements IStrategyRepository {
         strategyRuleReq.setRuleModel(ruleModel);
 
         return strategyRuleDao.queryStrategyRuleValue(strategyRuleReq);
+    }
+
+    @Override
+    public StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+        String ruleModels = strategyAwardDao.queryStrategyAwardRuleModels(strategyAward);
+
+        return StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
     }
 }

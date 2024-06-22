@@ -26,6 +26,12 @@
     <select id="queryStrategyAwardListByStrategyId" parameterType="java.lang.Long" resultMap="dataMap">
         SELECT strategy_id, award_id, award_count, award_count_surplus, award_rate
         FROM magic_lottery.strategy_award
-        WHERE strategy_id = #{strategy_id}
+        WHERE strategy_id = #{strategyId}
+    </select>
+
+    <select id="queryStrategyAwardRuleModels" parameterType="cn.pan.infrastructure.persistent.po.StrategyAward" resultType="java.lang.String">
+        SELECT rule_models
+        FROM magic_lottery.strategy_award
+        WHERE strategy_id = #{strategyId} AND award_id = #{awardId}
     </select>
 </mapper>

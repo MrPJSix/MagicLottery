@@ -2,7 +2,7 @@ package cn.pan.domain.strategy.service.rule.impl;
 
 import cn.pan.domain.strategy.model.entity.RuleActionEntity;
 import cn.pan.domain.strategy.model.entity.RuleMatterEntity;
-import cn.pan.domain.strategy.model.vo.RuleLogicCheckTypeVO;
+import cn.pan.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import cn.pan.domain.strategy.repository.IStrategyRepository;
 import cn.pan.domain.strategy.service.annotation.LogicStrategy;
 import cn.pan.domain.strategy.service.rule.ILogicFilter;

@@ -34,3 +34,224 @@
 24-06-06.00:01:18.556 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":100}
 24-06-06.00:01:18.589 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 24-06-06.00:01:18.673 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-06-22.16:49:53.475 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 32620 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-22.16:49:53.476 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.16:49:54.366 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.16:49:54.370 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.16:49:54.411 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+24-06-22.16:49:55.899 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.16:49:56.542 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.16:49:56.563 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.16:49:58.369 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.16:49:58.434 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.416 seconds (JVM running for 6.216)
+24-06-22.16:49:58.894 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-22.16:49:59.248 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-22.16:49:59.497 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.16:49:59.517 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.16:49:59.536 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.16:49:59.553 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:panjl strategyId:100001 ruleMode:rule_blacklist
+24-06-22.16:49:59.575 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:panjl strategyId:100001 ruleModel:rule_weight
+24-06-22.16:49:59.579 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: panjl ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-22.16:49:59.729 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"panjl"}
+24-06-22.16:49:59.732 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":105}
+24-06-22.16:49:59.762 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-22.16:49:59.776 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-06-22.16:51:29.031 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 3920 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-22.16:51:29.031 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.16:51:29.679 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.16:51:29.688 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.16:51:29.709 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+24-06-22.16:51:30.943 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.16:51:31.501 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.16:51:31.516 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.16:51:33.180 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.16:51:33.246 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 4.548 seconds (JVM running for 5.159)
+24-06-22.16:51:33.823 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-22.16:51:34.073 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-22.16:51:34.138 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.16:51:34.148 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.16:51:34.157 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.16:51:34.216 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-22.16:51:34.220 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-06-22.16:59:32.390 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 20184 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-22.16:59:32.391 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.16:59:33.042 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.16:59:33.045 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.16:59:33.070 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+24-06-22.16:59:34.382 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.16:59:35.038 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.16:59:35.051 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.16:59:36.900 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.16:59:36.973 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 4.901 seconds (JVM running for 5.546)
+24-06-22.16:59:37.686 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-22.16:59:37.958 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-22.16:59:38.014 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.16:59:38.028 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.16:59:38.037 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.16:59:38.083 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-22.16:59:38.099 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-06-22.17:03:39.317 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 29524 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-22.17:03:39.319 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.17:03:39.964 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:03:39.967 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:03:39.994 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+24-06-22.17:03:41.195 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.17:03:41.761 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:03:41.778 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:03:43.443 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.17:03:43.509 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 4.507 seconds (JVM running for 5.12)
+24-06-22.17:03:44.171 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-22.17:03:44.411 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-22.17:03:44.472 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:03:44.480 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:03:44.485 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:03:44.498 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:panjl strategyId:100003 ruleModel:rule_lock
+24-06-22.17:03:44.516 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: panjl ruleModel: rule_lock code: 0000 info: 放行；执行后续的流程，不受规则引擎影响
+24-06-22.17:03:44.662 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"panjl"}
+24-06-22.17:03:44.668 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":107}
+24-06-22.17:03:44.699 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-22.17:03:44.715 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-06-22.17:10:20.593 [main            ] INFO  StrategyAwardDaoTest   - Starting StrategyAwardDaoTest using Java 1.8.0_412 on Eternally6 with PID 22660 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-22.17:10:20.593 [main            ] INFO  StrategyAwardDaoTest   - The following 1 profile is active: "dev"
+24-06-22.17:10:21.233 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:10:21.236 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:10:21.266 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+24-06-22.17:10:22.504 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.17:10:23.075 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:10:23.093 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:10:24.810 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.17:10:24.886 [main            ] INFO  StrategyAwardDaoTest   - Started StrategyAwardDaoTest in 4.607 seconds (JVM running for 5.241)
+24-06-22.17:10:25.301 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-22.17:10:25.578 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-22.17:10:25.615 [main            ] INFO  StrategyAwardDaoTest   - StrategyAwardDaoTest 测试结果：[StrategyAward(id=null, strategyId=100001, awardId=101, awardTitle=null, awardSubtitle=null, awardCount=80000, awardCountSurplus=80000, awardRate=0.3000, ruleModels=null, sort=null, createTime=null, updateTime=null), StrategyAward(id=null, strategyId=100001, awardId=102, awardTitle=null, awardSubtitle=null, awardCount=10000, awardCountSurplus=10000, awardRate=0.2000, ruleModels=null, sort=null, createTime=null, updateTime=null), StrategyAward(id=null, strategyId=100001, awardId=103, awardTitle=null, awardSubtitle=null, awardCount=5000, awardCountSurplus=5000, awardRate=0.2000, ruleModels=null, sort=null, createTime=null, updateTime=null), StrategyAward(id=null, strategyId=100001, awardId=104, awardTitle=null, awardSubtitle=null, awardCount=4000, awardCountSurplus=4000, awardRate=0.1000, ruleModels=null, sort=null, createTime=null, updateTime=null), StrategyAward(id=null, strategyId=100001, awardId=105, awardTitle=null, awardSubtitle=null, awardCount=600, awardCountSurplus=600, awardRate=0.1000, ruleModels=null, sort=null, createTime=null, updateTime=null), StrategyAward(id=null, strategyId=100001, awardId=106, awardTitle=null, awardSubtitle=null, awardCount=200, awardCountSurplus=200, awardRate=0.0500, ruleModels=null, sort=null, createTime=null, updateTime=null), StrategyAward(id=null, strategyId=100001, awardId=107, awardTitle=null, awardSubtitle=null, awardCount=200, awardCountSurplus=200, awardRate=0.0400, ruleModels=null, sort=null, createTime=null, updateTime=null), StrategyAward(id=null, strategyId=100001, awardId=108, awardTitle=null, awardSubtitle=null, awardCount=199, awardCountSurplus=199, awardRate=0.0099, ruleModels=null, sort=null, createTime=null, updateTime=null), StrategyAward(id=null, strategyId=100001, awardId=109, awardTitle=null, awardSubtitle=null, awardCount=1, awardCountSurplus=1, awardRate=0.0001, ruleModels=null, sort=null, createTime=null, updateTime=null)]
+24-06-22.17:10:25.650 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-22.17:10:25.654 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-06-22.17:28:31.906 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 19452 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-22.17:28:31.907 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.17:28:32.574 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:28:32.576 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:28:32.598 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-22.17:28:33.884 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.17:28:34.476 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:28:34.494 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:28:36.344 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.17:28:36.424 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 4.842 seconds (JVM running for 5.475)
+24-06-22.17:28:37.113 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-22.17:28:37.392 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-22.17:28:37.451 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:28:37.457 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:28:37.462 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:28:37.476 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:panjl strategyId:100003 ruleModel:rule_lock
+24-06-22.17:28:37.492 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: panjl ruleModel: rule_lock code: 0000 info: 放行；执行后续的流程，不受规则引擎影响
+24-06-22.17:28:37.655 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"panjl"}
+24-06-22.17:28:37.658 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":108}
+24-06-22.17:28:37.684 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-22.17:28:37.699 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-06-22.17:29:33.198 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 22028 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-22.17:29:33.199 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.17:29:33.836 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:29:33.839 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:29:33.862 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-22.17:29:35.058 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.17:29:35.750 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:29:35.765 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:29:37.427 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.17:29:37.493 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 4.613 seconds (JVM running for 5.224)
+24-06-22.17:29:38.062 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-22.17:29:38.305 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-22.17:29:38.362 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:29:38.371 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:29:38.378 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:29:38.393 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:panjl strategyId:100003 ruleModel:rule_lock
+24-06-22.17:29:38.410 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: panjl ruleModel: rule_lock code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-22.17:29:38.410 [main            ] INFO  AbstractRaffleStrategy - 【临时日志】中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。
+24-06-22.17:29:38.563 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"panjl"}
+24-06-22.17:29:38.566 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardDesc":"中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。"}
+24-06-22.17:29:38.595 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-22.17:29:38.610 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-06-22.17:29:54.185 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 23804 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-22.17:29:54.186 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.17:29:54.827 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:29:54.829 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:29:54.856 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+24-06-22.17:29:56.062 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.17:29:56.640 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:29:56.656 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:29:58.329 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.17:29:58.401 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 4.534 seconds (JVM running for 5.169)
+24-06-22.17:29:59.059 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-22.17:29:59.323 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-22.17:29:59.394 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:29:59.406 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:29:59.417 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:29:59.438 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:panjl strategyId:100003 ruleModel:rule_lock
+24-06-22.17:29:59.458 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: panjl ruleModel: rule_lock code: 0000 info: 放行；执行后续的流程，不受规则引擎影响
+24-06-22.17:29:59.600 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"panjl"}
+24-06-22.17:29:59.602 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":107}
+24-06-22.17:29:59.631 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-22.17:29:59.649 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-06-22.17:30:08.381 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 27704 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-22.17:30:08.382 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.17:30:09.027 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:30:09.030 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:30:09.052 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-22.17:30:10.278 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.17:30:10.854 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:30:10.871 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:30:12.637 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.17:30:12.711 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 4.63 seconds (JVM running for 5.266)
+24-06-22.17:30:13.317 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-22.17:30:13.574 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-22.17:30:13.674 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:30:13.687 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:30:13.698 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:30:13.715 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:panjl strategyId:100003 ruleModel:rule_lock
+24-06-22.17:30:13.732 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: panjl ruleModel: rule_lock code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-22.17:30:13.732 [main            ] INFO  AbstractRaffleStrategy - 【临时日志】中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。
+24-06-22.17:30:13.872 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"panjl"}
+24-06-22.17:30:13.876 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardDesc":"中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。"}
+24-06-22.17:30:13.915 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-22.17:30:13.932 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-06-22.17:30:35.109 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 5904 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-22.17:30:35.110 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.17:30:35.778 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:30:35.781 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:30:35.806 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+24-06-22.17:30:37.078 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.17:30:37.645 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:30:37.661 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:30:39.412 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.17:30:39.484 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 4.691 seconds (JVM running for 5.34)
+24-06-22.17:30:40.080 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-22.17:30:40.349 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-22.17:30:40.415 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:30:40.427 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:30:40.438 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:30:40.457 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:panjl strategyId:100003 ruleModel:rule_lock
+24-06-22.17:30:40.476 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: panjl ruleModel: rule_lock code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-22.17:30:40.477 [main            ] INFO  AbstractRaffleStrategy - 【临时日志】中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。
+24-06-22.17:30:40.622 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"panjl"}
+24-06-22.17:30:40.624 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardDesc":"中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。"}
+24-06-22.17:30:40.659 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-22.17:30:40.675 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-06-22.17:30:47.508 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 25548 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-22.17:30:47.509 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.17:30:48.206 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:30:48.209 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:30:48.232 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+24-06-22.17:30:49.445 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.17:30:50.005 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:30:50.019 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-06-22.17:30:51.741 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.17:30:51.815 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 4.605 seconds (JVM running for 5.231)
+24-06-22.17:30:52.449 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-22.17:30:52.700 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-22.17:30:52.763 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:30:52.769 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:30:52.778 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-06-22.17:30:52.790 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:panjl strategyId:100003 ruleModel:rule_lock
+24-06-22.17:30:52.808 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: panjl ruleModel: rule_lock code: 0000 info: 放行；执行后续的流程，不受规则引擎影响
+24-06-22.17:30:52.962 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"panjl"}
+24-06-22.17:30:52.965 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":107}
+24-06-22.17:30:52.994 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-22.17:30:53.010 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
