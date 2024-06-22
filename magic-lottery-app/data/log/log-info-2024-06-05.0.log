@@ -1,0 +1,47 @@
+24-06-05.23:13:23.887 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 1916 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-05.23:13:23.888 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-05.23:13:24.738 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-05.23:13:24.741 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-05.23:13:24.765 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+24-06-05.23:13:26.105 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-05.23:13:26.684 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 124.220.25.230/124.220.25.230:16379
+24-06-05.23:13:26.750 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 124.220.25.230/124.220.25.230:16379
+24-06-05.23:13:28.802 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-05.23:13:28.880 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.352 seconds (JVM running for 6.191)
+24-06-05.23:13:55.788 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 20584 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-05.23:13:55.789 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-05.23:13:56.479 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-05.23:13:56.484 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-05.23:13:56.510 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-05.23:13:57.770 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-05.23:13:58.298 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 124.220.25.230/124.220.25.230:16379
+24-06-05.23:13:58.365 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 124.220.25.230/124.220.25.230:16379
+24-06-05.23:14:00.421 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-05.23:14:00.482 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.054 seconds (JVM running for 5.703)
+24-06-05.23:14:00.947 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:panjl strategyId:100001 ruleMode:rule_blacklist
+24-06-05.23:37:46.353 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 1992 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-05.23:37:46.354 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-05.23:37:47.170 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-05.23:37:47.173 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-05.23:37:47.200 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-05.23:37:48.592 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-05.23:37:49.155 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 124.220.25.230/124.220.25.230:16379
+24-06-05.23:37:49.220 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 124.220.25.230/124.220.25.230:16379
+24-06-05.23:37:51.211 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-05.23:37:51.278 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.285 seconds (JVM running for 5.949)
+24-06-05.23:37:51.759 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:panjl strategyId:100001 ruleMode:rule_blacklist
+24-06-05.23:56:56.715 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_412 on Eternally6 with PID 16492 (started by panji in D:\Code\java_workspace\magic-lottery\magic-lottery-app)
+24-06-05.23:56:56.716 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-05.23:56:57.414 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-05.23:56:57.422 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-05.23:56:57.442 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-06-05.23:56:58.670 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-05.23:56:59.206 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 124.220.25.230/124.220.25.230:16379
+24-06-05.23:56:59.273 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 124.220.25.230/124.220.25.230:16379
+24-06-05.23:57:01.275 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-05.23:57:01.349 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.015 seconds (JVM running for 5.757)
+24-06-05.23:57:01.766 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:panjl strategyId:100001 ruleMode:rule_blacklist
+24-06-05.23:57:01.803 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-06-05.23:57:02.233 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-06-05.23:57:02.313 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-06-05.23:57:02.323 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

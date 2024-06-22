@@ -1,0 +1,12 @@
+24-05-19.21:58:39.726 [main            ] INFO  Application            - Starting Application using Java 1.8.0_412 on Eternally6 with PID 29628 (D:\Code\java_workspace\magic-lottery\magic-lottery-app\target\classes started by panji in D:\Code\java_workspace\magic-lottery)
+24-05-19.21:58:39.727 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-05-19.21:58:40.166 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[cn.pan]' package. Please check your configuration.
+24-05-19.21:58:40.412 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-05-19.21:58:40.418 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-05-19.21:58:40.418 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-05-19.21:58:40.419 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-05-19.21:58:40.480 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-05-19.21:58:40.480 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 724 ms
+24-05-19.21:58:40.809 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-05-19.21:58:40.821 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-05-19.21:58:40.867 [main            ] INFO  Application            - Started Application in 1.487 seconds (JVM running for 2.249)
