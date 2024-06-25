@@ -109,8 +109,13 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
     @Override
     public Integer getRandomAwardId(Long strategyId, String ruleWeightValue) {
         String key = String.valueOf(strategyId).concat(Constants.UNDERLINE).concat(ruleWeightValue);
-        Integer rateRange = repository.getRateRange(key);
 
+        return getRandomAwardId(key);
+    }
+
+    @Override
+    public Integer getRandomAwardId(String key) {
+        Integer rateRange = repository.getRateRange(key);
         return repository.getStrategyAwardAssemble(key, new SecureRandom().nextInt(rateRange));
     }
 }

@@ -1,6 +1,6 @@
 package cn.pan.domain.strategy.model.valobj;
 
-import cn.pan.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import cn.pan.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import cn.pan.types.common.Constants;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

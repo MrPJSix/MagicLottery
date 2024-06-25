@@ -1,4 +1,4 @@
-package cn.pan.domain.strategy.service.rule;
+package cn.pan.domain.strategy.service.rule.filter;
 
 import cn.pan.domain.strategy.model.entity.RuleActionEntity;
 import cn.pan.domain.strategy.model.entity.RuleMatterEntity;
