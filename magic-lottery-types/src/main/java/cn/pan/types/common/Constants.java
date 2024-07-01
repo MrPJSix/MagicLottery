@@ -13,6 +13,7 @@ public class Constants {
         public static String STRATEGY_AWARD_KEY = "magic_lottery_strategy_award_key_";
         public static String STRATEGY_RATE_TABLE_KEY = "magic_lottery_strategy_rate_table_key_";
         public static String STRATEGY_RATE_RANGE_KEY = "magic_lottery_strategy_rate_range_key_";
+        public static String RULE_TREE_VO_KEY = "magic_lottery_rule_tree_vo_key_";
     }
 
 }

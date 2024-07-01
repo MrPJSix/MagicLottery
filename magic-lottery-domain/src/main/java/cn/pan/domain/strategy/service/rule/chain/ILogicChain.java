@@ -1,5 +1,7 @@
 package cn.pan.domain.strategy.service.rule.chain;
 
+import cn.pan.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
+
 /**
  * @author MrPJSix
  * @description 抽奖策略规则责任链接口
@@ -11,7 +13,7 @@ public interface ILogicChain extends ILogicChainArmory {
      *
      * @param userId     用户ID
      * @param strategyId 策略ID
-     * @return 奖品ID
+     * @return 奖品对象
      */
-    Integer logic(String userId, Long strategyId);
+    DefaultChainFactory.StrategyAwardVO logic(String userId, Long strategyId);
 }

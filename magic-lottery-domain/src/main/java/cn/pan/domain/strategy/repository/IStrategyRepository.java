@@ -3,6 +3,7 @@ package cn.pan.domain.strategy.repository;
 import cn.pan.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.pan.domain.strategy.model.entity.StrategyEntity;
 import cn.pan.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.pan.domain.strategy.model.valobj.RuleTreeVO;
 import cn.pan.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 
 import java.util.HashMap;
@@ -33,4 +34,6 @@ public interface IStrategyRepository {
     String queryStrategyRuleValue(Long strategyId, Integer awardId, String ruleModel);
 
     StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId);
+
+    RuleTreeVO queryRuleTreeVOByTreeId(String treeId);
 }
