@@ -34,4 +34,10 @@
         FROM magic_lottery.strategy_award
         WHERE strategy_id = #{strategyId} AND award_id = #{awardId}
     </select>
+
+    <update id="updateStrategyAwardStock" parameterType="cn.pan.infrastructure.persistent.po.StrategyAward">
+        UPDATE magic_lottery.strategy_award
+        SET award_count_surplus = award_count_surplus - 1
+        WHERE strategy_id = #{strategyId} AND award_id = #{awardId} AND award_count_surplus > 0
+    </update>
 </mapper>

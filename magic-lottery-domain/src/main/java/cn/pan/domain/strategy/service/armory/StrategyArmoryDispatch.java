@@ -27,13 +27,24 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
     @Resource
     private IStrategyRepository repository;
 
+    private final SecureRandom secureRandom = new SecureRandom();
+
     @Override
     public boolean assembleLotteryStrategy(Long strategyId) {
         // 1.查询策略配置
         List<StrategyAwardEntity> strategyAwardEntities = repository.queryStrategyAwardList(strategyId);
+
+        // 2.缓存奖品库存【用于decr扣减库存使用】
+        for (StrategyAwardEntity strategyAward : strategyAwardEntities) {
+            Integer awardId = strategyAward.getAwardId();
+            Integer awardCount = strategyAward.getAwardCount();
+            cacheStrategyAwardCount(strategyId, awardId, awardCount);
+        }
+
+        // 3.1 默认装配配置【全量抽奖概率】
         assembleLotteryStrategy(String.valueOf(strategyId), strategyAwardEntities);
 
-        // 2.权重策略配置 - 适用于 rule_weight 权重规则配置
+        // // 3.2 权重策略配置 - 适用于 rule_weight 权重规则配置【4000:102,103,104,105 5000:102,103,104,105,106,107 6000:102,103,104,105,106,107,108,109】
         StrategyEntity strategyEntity = repository.queryStrategyEntityByStrategyId(strategyId);
         String ruleWeight = strategyEntity.getRuleWeight();
         if (ruleWeight == null) {
@@ -41,13 +52,13 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
         }
 
         StrategyRuleEntity strategyRuleEntity = repository.queryStrategyRule(strategyId, ruleWeight);
+        // 业务异常，策略规则中 rule_weight 权重规则已适用但未配置
         if (strategyRuleEntity == null) {
             throw new AppException(ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getCode(), ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getInfo());
         }
 
         Map<String, List<Integer>> ruleWeightValueMap = strategyRuleEntity.getRuleWeightValues();
-        Set<String> keys = ruleWeightValueMap.keySet();
-        for (String key : keys) {
+        for (String key : ruleWeightValueMap.keySet()) {
             List<Integer> ruleWeightValues = ruleWeightValueMap.get(key);
             ArrayList<StrategyAwardEntity> strategyAwardEntitiesCopy = new ArrayList<>(strategyAwardEntities);
             strategyAwardEntitiesCopy.removeIf(entity->!ruleWeightValues.contains(entity.getAwardId()));
@@ -102,23 +113,34 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
     /**
      * 转换计算，只根据小数位来计算。如【0.01返回100】、【0.009返回1000】、【0.0018返回10000】
      */
-    private double convert(double min){
+    private double convert(double min) {
         double current = min;
         double max = 1;
-        while (current < 1){
+        while (current < 1) {
             current = current * 10;
             max = max * 10;
         }
         return max;
     }
 
+    /**
+     * 缓存奖品库存到Redis
+     *
+     * @param strategyId 策略ID
+     * @param awardId    奖品ID
+     * @param awardCount 奖品库存
+     */
+    private void cacheStrategyAwardCount(Long strategyId, Integer awardId, Integer awardCount) {
+        String cacheKey = Constants.RedisKey.STRATEGY_AWARD_COUNT_KEY + strategyId + Constants.UNDERLINE + awardId;
+        repository.cacheStrategyAwardCount(cacheKey, awardCount);
+    }
 
     @Override
     public Integer getRandomAwardId(Long strategyId) {
         // 分布式部署下，不一定为当前应用做的策略装配，所以要从Redis中获取。
         Integer rateRange = repository.getRateRange(strategyId);
         // 通过生成的随机值，获取概率值奖品查找表的结果
-        return repository.getStrategyAwardAssemble(String.valueOf(strategyId), new SecureRandom().nextInt(rateRange));
+        return repository.getStrategyAwardAssemble(String.valueOf(strategyId), secureRandom.nextInt(rateRange));
     }
 
     @Override
@@ -131,6 +153,12 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
     @Override
     public Integer getRandomAwardId(String key) {
         Integer rateRange = repository.getRateRange(key);
-        return repository.getStrategyAwardAssemble(key, new SecureRandom().nextInt(rateRange));
+        return repository.getStrategyAwardAssemble(key, secureRandom.nextInt(rateRange));
+    }
+
+    @Override
+    public Boolean subtractionAwardStock(Long strategyId, Integer awardId) {
+        String cacheKey = Constants.RedisKey.STRATEGY_AWARD_COUNT_KEY + strategyId + Constants.UNDERLINE + awardId;
+        return repository.subtractionAwardStock(cacheKey);
     }
 }

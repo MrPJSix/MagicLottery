@@ -95,7 +95,7 @@ LOCK TABLES `rule_tree_node` WRITE;
 INSERT INTO `rule_tree_node` (`id`, `tree_id`, `rule_key`, `rule_desc`, `rule_value`)
 VALUES
     (1,'tree_lock','rule_lock','限定用户已完成N次抽奖后解锁','1'),
-    (2,'tree_lock','rule_luck_award','兜底奖品随机积分','1,100'),
+    (2,'tree_lock','rule_luck_award','兜底奖品随机积分','101:1,100'),
     (3,'tree_lock','rule_stock','库存扣减规则',NULL);
 
 /*!40000 ALTER TABLE `rule_tree_node` ENABLE KEYS */;
@@ -212,8 +212,8 @@ VALUES
     (19,100005,103,'随机积分',NULL,80000,80000,0.0300,'rule_random',1),
     (20,100005,104,'随机积分',NULL,80000,80000,0.0300,'rule_random',1),
     (21,100005,105,'随机积分',NULL,80000,80000,0.0010,'rule_random',1),
-    (22,100006,101,'随机积分',NULL,3,3,0.0300,'tree_lock',1),
-    (23,100006,102,'随机积分',NULL,97,97,0.9700,'tree_lock',1);
+    (22,100006,101,'随机积分',NULL,3,1,0.0300,'tree_lock',1),
+    (23,100006,102,'随机积分',NULL,97,77,0.9700,'tree_lock',1);
 
 
 /*!40000 ALTER TABLE `strategy_award` ENABLE KEYS */;
