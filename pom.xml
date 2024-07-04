@@ -13,6 +13,7 @@
         <module>magic-lottery-trigger</module>
         <module>magic-lottery-infrastructure</module>
         <module>magic-lottery-types</module>
+        <module>magic-lottery-api</module>
     </modules>
 
     <repositories>
