@@ -13,13 +13,13 @@
 
     <select id="queryStrategyList" parameterType="java.lang.String" resultMap="dataMap">
         SELECT strategy_id
-        FROM magic_lottery.strategy
+        FROM strategy
         LIMIT 10
     </select>
 
     <select id="queryStrategyByStrategyId" parameterType="java.lang.Long" resultMap="dataMap">
         SELECT strategy_id, strategy_desc, rule_models
-        FROM magic_lottery.strategy
+        FROM strategy
         WHERE strategy_id = #{strategyId}
     </select>
 </mapper>

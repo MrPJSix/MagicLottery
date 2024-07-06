@@ -14,7 +14,7 @@
 
     <select id="queryAwardList" parameterType="java.lang.String" resultMap="dataMap">
         SELECT award_id, award_key, award_config, award_desc
-        FROM magic_lottery.award
+        FROM award
         LIMIT 10
     </select>
 

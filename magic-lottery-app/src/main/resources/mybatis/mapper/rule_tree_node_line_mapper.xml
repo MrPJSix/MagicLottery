@@ -15,7 +15,7 @@
 
     <select id="queryRuleTreeNodeLineListByTreeId" parameterType="java.lang.String" resultMap="dataMap">
         select tree_id, rule_node_from, rule_node_to, rule_limit_type, rule_limit_value
-        from magic_lottery.rule_tree_node_line
+        from rule_tree_node_line
         where tree_id = #{treeId}
     </select>
 

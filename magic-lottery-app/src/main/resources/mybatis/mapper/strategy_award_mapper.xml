@@ -19,30 +19,30 @@
 
     <select id="queryStrategyAwardList" resultMap="dataMap">
         SELECT strategy_id
-        FROM magic_lottery.strategy_award
+        FROM strategy_award
         LIMIT 10
     </select>
 
     <select id="queryStrategyAwardListByStrategyId" parameterType="java.lang.Long" resultMap="dataMap">
         SELECT strategy_id, award_id, award_title, award_subtitle, award_count, award_count_surplus, award_rate, sort
-        FROM magic_lottery.strategy_award
+        FROM strategy_award
         WHERE strategy_id = #{strategyId}
         ORDER BY sort ASC
     </select>
 
     <select id="queryStrategyAwardRuleModels" parameterType="cn.pan.infrastructure.persistent.po.StrategyAward" resultType="java.lang.String">
         SELECT rule_models
-        FROM magic_lottery.strategy_award
+        FROM strategy_award
         WHERE strategy_id = #{strategyId} AND award_id = #{awardId}
     </select>
     <select id="queryStrategyAward" parameterType="cn.pan.infrastructure.persistent.po.StrategyAward" resultMap="dataMap">
         SELECT strategy_id, award_id, award_title, award_subtitle, award_count, award_count_surplus, award_rate, rule_models, sort
-        FROM magic_lottery.strategy_award
+        FROM strategy_award
         WHERE strategy_id = #{strategyId} and award_id = #{awardId}
     </select>
 
     <update id="updateStrategyAwardStock" parameterType="cn.pan.infrastructure.persistent.po.StrategyAward">
-        UPDATE magic_lottery.strategy_award
+        UPDATE strategy_award
         SET award_count_surplus = award_count_surplus - 1
         WHERE strategy_id = #{strategyId} AND award_id = #{awardId} AND award_count_surplus > 0
     </update>
