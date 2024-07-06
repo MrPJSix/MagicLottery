@@ -7,7 +7,7 @@ import cn.pan.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
  * @description 抽奖策略规则责任链接口
  * @date 2024/6/24 23:03
  */
-public interface ILogicChain extends ILogicChainArmory {
+public interface ILogicChain extends ILogicChainArmory, Cloneable {
     /**
      * 责任链接口
      *
