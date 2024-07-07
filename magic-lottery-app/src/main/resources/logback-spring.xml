@@ -24,78 +24,78 @@
         </encoder>
     </appender>
 
-    <!--输出到文件-->
-    <!-- 时间滚动输出 level为 INFO 日志 -->
-    <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <!-- 正在记录的日志文件的路径及文件名 -->
-        <file>./data/log/log_info.log</file>
-        <!--日志文件输出格式-->
-        <encoder>
-            <pattern>%d{yy-MM-dd.HH:mm:ss.SSS} [%-16t] %-5p %-22c{0}%X{ServiceId} -%X{trace-id} %m%n</pattern>
-            <charset>UTF-8</charset>
-        </encoder>
-        <!-- 日志记录器的滚动策略，按日期，按大小记录 -->
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- 每天日志归档路径以及格式 -->
-            <fileNamePattern>./data/log/log-info-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>100MB</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
-            <!--日志文件保留天数-->
-            <maxHistory>15</maxHistory>
-            <totalSizeCap>10GB</totalSizeCap>
-        </rollingPolicy>
-    </appender>
+<!--    &lt;!&ndash;输出到文件&ndash;&gt;-->
+<!--    &lt;!&ndash; 时间滚动输出 level为 INFO 日志 &ndash;&gt;-->
+<!--    <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--        &lt;!&ndash; 正在记录的日志文件的路径及文件名 &ndash;&gt;-->
+<!--        <file>./data/log/log_info.log</file>-->
+<!--        &lt;!&ndash;日志文件输出格式&ndash;&gt;-->
+<!--        <encoder>-->
+<!--            <pattern>%d{yy-MM-dd.HH:mm:ss.SSS} [%-16t] %-5p %-22c{0}%X{ServiceId} -%X{trace-id} %m%n</pattern>-->
+<!--            <charset>UTF-8</charset>-->
+<!--        </encoder>-->
+<!--        &lt;!&ndash; 日志记录器的滚动策略，按日期，按大小记录 &ndash;&gt;-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            &lt;!&ndash; 每天日志归档路径以及格式 &ndash;&gt;-->
+<!--            <fileNamePattern>./data/log/log-info-%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+<!--            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+<!--                <maxFileSize>100MB</maxFileSize>-->
+<!--            </timeBasedFileNamingAndTriggeringPolicy>-->
+<!--            &lt;!&ndash;日志文件保留天数&ndash;&gt;-->
+<!--            <maxHistory>15</maxHistory>-->
+<!--            <totalSizeCap>10GB</totalSizeCap>-->
+<!--        </rollingPolicy>-->
+<!--    </appender>-->
 
-    <!-- 时间滚动输出 level为 ERROR 日志 -->
-    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <!-- 正在记录的日志文件的路径及文件名 -->
-        <file>./data/log/log_error.log</file>
-        <!--日志文件输出格式-->
-        <encoder>
-            <pattern>%d{yy-MM-dd.HH:mm:ss.SSS} [%-16t] %-5p %-22c{0}%X{ServiceId} -%X{trace-id} %m%n</pattern>
-            <charset>UTF-8</charset>
-        </encoder>
-        <!-- 日志记录器的滚动策略，按日期，按大小记录 -->
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>./data/log/log-error-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>100MB</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
-            <!-- 日志文件保留天数【根据服务器预留，可自行调整】 -->
-            <maxHistory>7</maxHistory>
-            <totalSizeCap>5GB</totalSizeCap>
-        </rollingPolicy>
-        <!-- WARN 级别及以上 -->
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>WARN</level>
-        </filter>
-    </appender>
+<!--    &lt;!&ndash; 时间滚动输出 level为 ERROR 日志 &ndash;&gt;-->
+<!--    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--        &lt;!&ndash; 正在记录的日志文件的路径及文件名 &ndash;&gt;-->
+<!--        <file>./data/log/log_error.log</file>-->
+<!--        &lt;!&ndash;日志文件输出格式&ndash;&gt;-->
+<!--        <encoder>-->
+<!--            <pattern>%d{yy-MM-dd.HH:mm:ss.SSS} [%-16t] %-5p %-22c{0}%X{ServiceId} -%X{trace-id} %m%n</pattern>-->
+<!--            <charset>UTF-8</charset>-->
+<!--        </encoder>-->
+<!--        &lt;!&ndash; 日志记录器的滚动策略，按日期，按大小记录 &ndash;&gt;-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>./data/log/log-error-%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+<!--            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+<!--                <maxFileSize>100MB</maxFileSize>-->
+<!--            </timeBasedFileNamingAndTriggeringPolicy>-->
+<!--            &lt;!&ndash; 日志文件保留天数【根据服务器预留，可自行调整】 &ndash;&gt;-->
+<!--            <maxHistory>7</maxHistory>-->
+<!--            <totalSizeCap>5GB</totalSizeCap>-->
+<!--        </rollingPolicy>-->
+<!--        &lt;!&ndash; WARN 级别及以上 &ndash;&gt;-->
+<!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+<!--            <level>WARN</level>-->
+<!--        </filter>-->
+<!--    </appender>-->
 
-    <!-- 异步输出 -->
-    <appender name="ASYNC_FILE_INFO" class="ch.qos.logback.classic.AsyncAppender">
-        <!-- 队列剩余容量小于discardingThreshold,则会丢弃TRACT、DEBUG、INFO级别的日志;默认值-1,为queueSize的20%;0不丢失日志 -->
-        <discardingThreshold>0</discardingThreshold>
-        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
-        <queueSize>8192</queueSize>
-        <!-- neverBlock:true 会丢失日志,但业务性能不受影响 -->
-        <neverBlock>true</neverBlock>
-        <!--是否提取调用者数据-->
-        <includeCallerData>false</includeCallerData>
-        <appender-ref ref="INFO_FILE"/>
-    </appender>
+<!--    &lt;!&ndash; 异步输出 &ndash;&gt;-->
+<!--    <appender name="ASYNC_FILE_INFO" class="ch.qos.logback.classic.AsyncAppender">-->
+<!--        &lt;!&ndash; 队列剩余容量小于discardingThreshold,则会丢弃TRACT、DEBUG、INFO级别的日志;默认值-1,为queueSize的20%;0不丢失日志 &ndash;&gt;-->
+<!--        <discardingThreshold>0</discardingThreshold>-->
+<!--        &lt;!&ndash; 更改默认的队列的深度,该值会影响性能.默认值为256 &ndash;&gt;-->
+<!--        <queueSize>8192</queueSize>-->
+<!--        &lt;!&ndash; neverBlock:true 会丢失日志,但业务性能不受影响 &ndash;&gt;-->
+<!--        <neverBlock>true</neverBlock>-->
+<!--        &lt;!&ndash;是否提取调用者数据&ndash;&gt;-->
+<!--        <includeCallerData>false</includeCallerData>-->
+<!--        <appender-ref ref="INFO_FILE"/>-->
+<!--    </appender>-->
 
-    <appender name="ASYNC_FILE_ERROR" class="ch.qos.logback.classic.AsyncAppender">
-        <!-- 队列剩余容量小于discardingThreshold,则会丢弃TRACT、DEBUG、INFO级别的日志;默认值-1,为queueSize的20%;0不丢失日志 -->
-        <discardingThreshold>0</discardingThreshold>
-        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
-        <queueSize>1024</queueSize>
-        <!-- neverBlock:true 会丢失日志,但业务性能不受影响 -->
-        <neverBlock>true</neverBlock>
-        <!--是否提取调用者数据-->
-        <includeCallerData>false</includeCallerData>
-        <appender-ref ref="ERROR_FILE"/>
-    </appender>
+<!--    <appender name="ASYNC_FILE_ERROR" class="ch.qos.logback.classic.AsyncAppender">-->
+<!--        &lt;!&ndash; 队列剩余容量小于discardingThreshold,则会丢弃TRACT、DEBUG、INFO级别的日志;默认值-1,为queueSize的20%;0不丢失日志 &ndash;&gt;-->
+<!--        <discardingThreshold>0</discardingThreshold>-->
+<!--        &lt;!&ndash; 更改默认的队列的深度,该值会影响性能.默认值为256 &ndash;&gt;-->
+<!--        <queueSize>1024</queueSize>-->
+<!--        &lt;!&ndash; neverBlock:true 会丢失日志,但业务性能不受影响 &ndash;&gt;-->
+<!--        <neverBlock>true</neverBlock>-->
+<!--        &lt;!&ndash;是否提取调用者数据&ndash;&gt;-->
+<!--        <includeCallerData>false</includeCallerData>-->
+<!--        <appender-ref ref="ERROR_FILE"/>-->
+<!--    </appender>-->
 
     <!-- 开发环境：控制台打印 -->
     <springProfile name="dev">
@@ -104,10 +104,10 @@
 
     <root level="info">
         <appender-ref ref="CONSOLE"/>
-        <!-- 异步日志-INFO -->
-        <appender-ref ref="ASYNC_FILE_INFO"/>
-        <!-- 异步日志-ERROR -->
-        <appender-ref ref="ASYNC_FILE_ERROR"/>
+<!--        &lt;!&ndash; 异步日志-INFO &ndash;&gt;-->
+<!--        <appender-ref ref="ASYNC_FILE_INFO"/>-->
+<!--        &lt;!&ndash; 异步日志-ERROR &ndash;&gt;-->
+<!--        <appender-ref ref="ASYNC_FILE_ERROR"/>-->
     </root>
 
 </configuration>
