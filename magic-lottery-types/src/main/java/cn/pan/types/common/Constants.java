@@ -7,8 +7,13 @@ public class Constants {
     public final static String SPACE = " ";
     public final static String UNDERLINE = "_";
 
-
+    /**
+     * Redis缓存key前缀标识，
+     */
     public static class RedisKey {
+        public static String ACTIVITY_KEY = "magic_lottery_activity_key_";
+        public static String ACTIVITY_SKU_KEY = "magic_lottery_activity_sku_key_";
+        public static String ACTIVITY_COUNT_KEY = "magic_lottery_activity_count_key_";
         public static String STRATEGY_KEY = "magic_lottery_strategy_key_";
         public static String STRATEGY_AWARD_KEY = "magic_lottery_strategy_award_key_";
         public static String STRATEGY_AWARD_LIST_KEY = "magic_lottery_strategy_award_list_key_";
