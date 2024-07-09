@@ -1,5 +1,6 @@
 package cn.pan.infrastructure.persistent.dao;
 
+import cn.pan.infrastructure.persistent.po.RaffleActivitySku;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

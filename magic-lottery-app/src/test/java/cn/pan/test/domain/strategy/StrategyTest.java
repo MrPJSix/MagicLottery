@@ -1,4 +1,4 @@
-package cn.pan.test.domain;
+package cn.pan.test.domain.strategy;
 
 import cn.pan.domain.strategy.service.armory.IStrategyArmory;
 import cn.pan.domain.strategy.service.armory.IStrategyDispatch;
