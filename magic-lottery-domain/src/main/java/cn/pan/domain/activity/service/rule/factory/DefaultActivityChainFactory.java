@@ -3,6 +3,7 @@ package cn.pan.domain.activity.service.rule.factory;
 import cn.pan.domain.activity.service.rule.IActionChain;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
@@ -11,6 +12,7 @@ import java.util.Map;
  * @description
  * @date 2024/7/9 23:39
  */
+@Service
 public class DefaultActivityChainFactory {
     private final IActionChain actionChain;
 

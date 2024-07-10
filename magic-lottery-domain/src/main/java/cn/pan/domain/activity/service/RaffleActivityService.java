@@ -6,6 +6,7 @@ import cn.pan.domain.activity.model.valobj.OrderStateVO;
 import cn.pan.domain.activity.repository.IActivityRepository;
 import cn.pan.domain.activity.service.rule.factory.DefaultActivityChainFactory;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
@@ -14,6 +15,7 @@ import java.util.Date;
  * @description 抽奖活动服务
  * @date 2024/7/8 23:30
  */
+@Service
 public class RaffleActivityService extends AbstractRaffleActivity {
 
     public RaffleActivityService(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
