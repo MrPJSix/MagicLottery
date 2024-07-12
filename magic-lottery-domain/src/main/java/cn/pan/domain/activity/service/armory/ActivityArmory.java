@@ -3,6 +3,7 @@ package cn.pan.domain.activity.service.armory;
 import cn.pan.domain.activity.model.entity.ActivitySkuEntity;
 import cn.pan.domain.activity.repository.IActivityRepository;
 import cn.pan.types.common.Constants;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -12,6 +13,7 @@ import java.util.Date;
  * @description
  * @date 2024/7/11 22:47
  */
+@Service
 public class ActivityArmory implements IActivityArmory, IActivityDispatch {
 
     @Resource

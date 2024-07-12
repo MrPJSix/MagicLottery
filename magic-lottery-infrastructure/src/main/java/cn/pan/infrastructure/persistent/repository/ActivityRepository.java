@@ -83,7 +83,9 @@ public class ActivityRepository implements IActivityRepository {
         // 优先从缓存获取
         String cacheKey = Constants.RedisKey.ACTIVITY_KEY + activityId;
         ActivityEntity activityEntity = redisService.getValue(cacheKey);
-        if (null != activityEntity) return activityEntity;
+        if (activityEntity != null) {
+            return activityEntity;
+        }
         // 从库中获取数据
         RaffleActivity raffleActivity = raffleActivityDao.queryRaffleActivityByActivityId(activityId);
         activityEntity = ActivityEntity.builder()
@@ -104,7 +106,9 @@ public class ActivityRepository implements IActivityRepository {
         // 优先从缓存获取
         String cacheKey = Constants.RedisKey.ACTIVITY_COUNT_KEY + activityCountId;
         ActivityCountEntity activityCountEntity = redisService.getValue(cacheKey);
-        if (null != activityCountEntity) return activityCountEntity;
+        if (activityCountEntity != null) {
+            return activityCountEntity;
+        }
         // 从库中获取数据
         RaffleActivityCount raffleActivityCount = raffleActivityCountDao.queryRaffleActivityCountByActivityCountId(activityCountId);
         activityCountEntity = ActivityCountEntity.builder()
