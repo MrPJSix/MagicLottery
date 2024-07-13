@@ -30,6 +30,15 @@ CREATE TABLE `raffle_activity_account` (
                                            UNIQUE KEY `uq_user_id_activity_id` (`user_id`,`activity_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='抽奖活动账户表';
 
+LOCK TABLES `raffle_activity_account` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_account` DISABLE KEYS */;
+
+INSERT INTO `raffle_activity_account` (`id`, `user_id`, `activity_id`, `total_count`, `total_count_surplus`, `day_count`, `day_count_surplus`, `month_count`, `month_count_surplus`)
+VALUES
+    (3,'MyPJSix',100301,44,43,44,43,44,43);
+
+/*!40000 ALTER TABLE `raffle_activity_account` ENABLE KEYS */;
+UNLOCK TABLES;
 
 # 转储表 raffle_activity_account_day
 # ------------------------------------------------------------

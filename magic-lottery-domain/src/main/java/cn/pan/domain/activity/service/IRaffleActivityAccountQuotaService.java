@@ -1,6 +1,5 @@
 package cn.pan.domain.activity.service;
 
-import cn.pan.domain.activity.model.entity.ActivityOrderEntity;
 import cn.pan.domain.activity.model.entity.SkuRechargeEntity;
 
 /**
@@ -8,7 +7,7 @@ import cn.pan.domain.activity.model.entity.SkuRechargeEntity;
  * @description 抽奖活动订单接口
  * @date 2024/7/8 23:22
  */
-public interface IRaffleOrder {
+public interface IRaffleActivityAccountQuotaService {
 
     /**
      * 创建 sku 账户充值订单，给用户增加抽奖次数
@@ -18,6 +17,6 @@ public interface IRaffleOrder {
      * @param skuRechargeEntity 活动商品充值实体对象
      * @return 活动ID
      */
-    String createSkuRechargeOrder(SkuRechargeEntity skuRechargeEntity);
+    String createOrder(SkuRechargeEntity skuRechargeEntity);
 
 }

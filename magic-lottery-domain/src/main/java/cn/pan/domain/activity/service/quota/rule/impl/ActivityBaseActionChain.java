@@ -1,10 +1,10 @@
-package cn.pan.domain.activity.service.rule.impl;
+package cn.pan.domain.activity.service.quota.rule.impl;
 
 import cn.pan.domain.activity.model.entity.ActivityCountEntity;
 import cn.pan.domain.activity.model.entity.ActivityEntity;
 import cn.pan.domain.activity.model.entity.ActivitySkuEntity;
 import cn.pan.domain.activity.model.valobj.ActivityStateVO;
-import cn.pan.domain.activity.service.rule.AbstractActionChain;
+import cn.pan.domain.activity.service.quota.rule.AbstractActionChain;
 import cn.pan.types.enums.ResponseCode;
 import cn.pan.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;

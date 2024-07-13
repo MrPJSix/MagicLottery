@@ -4,10 +4,10 @@ import cn.pan.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
 /**
  * @author MrPJSix
- * @description 活动sku库存处理接口
+ * @description 抽奖活动SKU库存服务
  * @date 2024/7/11 22:42
  */
-public interface ISkuStock {
+public interface IRaffleActivitySkuStockService {
 
     /**
      * 获取活动sku库存消耗队列

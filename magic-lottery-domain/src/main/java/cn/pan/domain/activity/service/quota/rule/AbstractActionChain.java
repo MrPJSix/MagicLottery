@@ -1,4 +1,4 @@
-package cn.pan.domain.activity.service.rule;
+package cn.pan.domain.activity.service.quota.rule;
 
 /**
  * @author MrPJSix

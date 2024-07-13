@@ -38,5 +38,32 @@
         WHERE user_id = #{userId} AND activity_id = #{activityId}
     </update>
 
+    <select id="queryActivityAccountByUserId" parameterType="cn.pan.infrastructure.persistent.po.RaffleActivityAccount" resultMap="dataMap">
+        SELECT user_id, activity_id, total_count, total_count_surplus, day_count,
+               day_count_surplus, month_count, month_count_surplus
+        FROM raffle_activity_account
+        WHERE user_id = #{userId} AND activity_id = #{activityId}
+    </select>
+
+    <update id="updateActivityAccountSubtractionQuota" parameterType="cn.pan.infrastructure.persistent.po.RaffleActivityAccount">
+        UPDATE raffle_activity_account
+        SET total_count_surplus = total_count_surplus - 1,
+            day_count_surplus = day_count_surplus - 1,
+            month_count_surplus = month_count_surplus - 1,
+            update_time = now()
+        WHERE user_id = #{userId} AND activity_id = #{activityId} AND total_count_surplus > 0 AND day_count_surplus > 0 AND month_count_surplus > 0
+    </update>
+
+    <update id="updateActivityAccountMonthSurplusImageQuota" parameterType="cn.pan.infrastructure.persistent.po.RaffleActivityAccount">
+        UPDATE raffle_activity_account
+        SET month_count_surplus = #{monthCountSurplus} - 1, update_time = now()
+        WHERE user_id = #{userId} AND activity_id = #{activityId}
+    </update>
+
+    <update id="updateActivityAccountDaySurplusImageQuota" parameterType="cn.pan.infrastructure.persistent.po.RaffleActivityAccountDay">
+        UPDATE raffle_activity_account
+        SET day_count_surplus = #{dayCountSurplus} - 1, update_time = now()
+        WHERE user_id = #{userId} AND activity_id = #{activityId}
+    </update>
 
 </mapper>
