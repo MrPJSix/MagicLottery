@@ -6,6 +6,7 @@ import cn.pan.domain.activity.model.entity.*;
 import cn.pan.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author MrPJSix
@@ -45,5 +46,7 @@ public interface IActivityRepository {
     ActivityAccountDayEntity queryActivityAccountDayByUserId(String userId, Long activityId, String day);
 
     void saveCreatePartakeOrderAggregate(CreatePartakeOrderAggregate createPartakeOrderAggregate);
+
+    List<ActivitySkuEntity> queryActivitySkuListByActivityId(Long activityId);
 
 }
