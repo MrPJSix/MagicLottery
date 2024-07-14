@@ -47,11 +47,20 @@
 
     <update id="updateActivityAccountSubtractionQuota" parameterType="cn.pan.infrastructure.persistent.po.RaffleActivityAccount">
         UPDATE raffle_activity_account
-        SET total_count_surplus = total_count_surplus - 1,
-            day_count_surplus = day_count_surplus - 1,
-            month_count_surplus = month_count_surplus - 1,
-            update_time = now()
-        WHERE user_id = #{userId} AND activity_id = #{activityId} AND total_count_surplus > 0 AND day_count_surplus > 0 AND month_count_surplus > 0
+        SET total_count_surplus = total_count_surplus - 1, update_time = now()
+        WHERE user_id = #{userId} and activity_id = #{activityId} and total_count_surplus > 0
+    </update>
+
+    <update id="updateActivityAccountMonthSubtractionQuota" parameterType="cn.pan.infrastructure.persistent.po.RaffleActivityAccount">
+        UPDATE raffle_activity_account
+        SET month_count_surplus = month_count_surplus - 1, update_time = now()
+        WHERE user_id = #{userId} and activity_id = #{activityId} and month_count_surplus > 0
+    </update>
+
+    <update id="updateActivityAccountDaySubtractionQuota" parameterType="cn.pan.infrastructure.persistent.po.RaffleActivityAccount">
+        UPDATE raffle_activity_account
+        SET day_count_surplus = day_count_surplus - 1, update_time = now()
+        WHERE user_id = #{userId} and activity_id = #{activityId} and day_count_surplus > 0
     </update>
 
     <update id="updateActivityAccountMonthSurplusImageQuota" parameterType="cn.pan.infrastructure.persistent.po.RaffleActivityAccount">
