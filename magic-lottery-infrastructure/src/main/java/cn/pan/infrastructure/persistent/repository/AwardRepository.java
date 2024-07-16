@@ -14,10 +14,9 @@ import cn.pan.infrastructure.persistent.po.UserAwardRecord;
 import cn.pan.infrastructure.persistent.po.UserRaffleOrder;
 import cn.pan.types.enums.ResponseCode;
 import cn.pan.types.exception.AppException;
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.support.TransactionTemplate;
 

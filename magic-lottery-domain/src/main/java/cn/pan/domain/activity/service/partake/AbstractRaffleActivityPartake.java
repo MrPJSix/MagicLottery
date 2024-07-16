@@ -9,7 +9,7 @@ import cn.pan.domain.activity.repository.IActivityRepository;
 import cn.pan.domain.activity.service.IRaffleActivityPartakeService;
 import cn.pan.types.enums.ResponseCode;
 import cn.pan.types.exception.AppException;
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;

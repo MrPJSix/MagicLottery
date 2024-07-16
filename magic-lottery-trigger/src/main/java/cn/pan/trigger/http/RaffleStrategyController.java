@@ -16,7 +16,7 @@ import cn.pan.trigger.api.dto.RaffleStrategyResponseDTO;
 import cn.pan.types.enums.ResponseCode;
 import cn.pan.types.exception.AppException;
 import cn.pan.types.model.Response;
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;

@@ -3,7 +3,7 @@ package cn.pan.test.domain.rebate;
 import cn.pan.domain.rebate.model.entity.BehaviorEntity;
 import cn.pan.domain.rebate.model.valobj.BehaviorTypeVO;
 import cn.pan.domain.rebate.service.IBehaviorRebateService;
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

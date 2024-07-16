@@ -16,7 +16,7 @@ import cn.pan.infrastructure.persistent.po.Task;
 import cn.pan.infrastructure.persistent.po.UserBehaviorRebateOrder;
 import cn.pan.types.enums.ResponseCode;
 import cn.pan.types.exception.AppException;
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Component;

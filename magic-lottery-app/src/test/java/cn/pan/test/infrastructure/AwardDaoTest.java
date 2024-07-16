@@ -2,7 +2,7 @@ package cn.pan.test.infrastructure;
 
 import cn.pan.infrastructure.persistent.dao.IAwardDao;
 import cn.pan.infrastructure.persistent.po.Award;
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

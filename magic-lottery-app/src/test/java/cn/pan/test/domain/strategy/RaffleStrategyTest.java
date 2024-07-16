@@ -8,7 +8,7 @@ import cn.pan.domain.strategy.service.IRaffleStrategy;
 import cn.pan.domain.strategy.service.armory.IStrategyArmory;
 import cn.pan.domain.strategy.service.rule.chain.impl.RuleWeightLogicChain;
 import cn.pan.domain.strategy.service.rule.tree.impl.RuleLockLogicTreeNode;
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
