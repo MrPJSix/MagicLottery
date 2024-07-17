@@ -385,6 +385,7 @@ CREATE TABLE `strategy_rule` (
                                  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
                                  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
                                  PRIMARY KEY (`id`),
+                                 UNIQUE KEY `uq_strategy_id_rule_model` (`strategy_id`,`rule_model`),
                                  KEY `idx_strategy_id_award_id` (`strategy_id`,`award_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='抽奖策略规则表';
 

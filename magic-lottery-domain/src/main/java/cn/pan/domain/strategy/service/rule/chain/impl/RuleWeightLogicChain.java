@@ -29,9 +29,6 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
     @Resource
     private IStrategyDispatch strategyDispatch;
 
-    // 根据用户ID查询用户抽奖消耗的积分值，先写死
-    public Long userScore = 0L;
-
     /**
      * 权重责任链过滤；
      * 1. 权重规则格式；4000:102,103,104,105 5000:102,103,104,105,106,107 6000:102,103,104,105,106,107,108,109
@@ -55,6 +52,7 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
         Collections.sort(analyticalSortedKeys);
 
         // 3. 找出最后一个符合的值，也就是【4500 积分，能找到 4000:102,103,104,105】、【5000 积分，能找到 5000:102,103,104,105,106,107】
+        Integer userScore = strategyRepository.queryActivityAccountTotalUseCount(userId, strategyId);
         Long nextValue = analyticalSortedKeys.stream()
                 .filter(key -> userScore >= key)
                 .max(Comparator.naturalOrder())

@@ -1,6 +1,7 @@
 package cn.pan.domain.rebate.repository;
 
 import cn.pan.domain.rebate.model.aggregate.BehaviorRebateAggregate;
+import cn.pan.domain.rebate.model.entity.BehaviorRebateOrderEntity;
 import cn.pan.domain.rebate.model.valobj.BehaviorTypeVO;
 import cn.pan.domain.rebate.model.valobj.DailyBehaviorRebateVO;
 
@@ -16,5 +17,7 @@ public interface IBehaviorRebateRepository {
     List<DailyBehaviorRebateVO> queryDailyBehaviorRebateConfig(BehaviorTypeVO behaviorTypeVO);
 
     void saveUserRebateRecord(String userId, List<BehaviorRebateAggregate> behaviorRebateAggregates);
+
+    List<BehaviorRebateOrderEntity> queryOrderByOutBusinessNo(String userId, String outBusinessNo);
 
 }

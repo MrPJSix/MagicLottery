@@ -2,7 +2,9 @@ package cn.pan.test.domain.strategy;
 
 import cn.pan.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.pan.domain.strategy.model.entity.RaffleFactorEntity;
+import cn.pan.domain.strategy.model.valobj.RuleWeightVO;
 import cn.pan.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
+import cn.pan.domain.strategy.service.IRaffleRule;
 import cn.pan.domain.strategy.service.IRaffleStock;
 import cn.pan.domain.strategy.service.IRaffleStrategy;
 import cn.pan.domain.strategy.service.armory.IStrategyArmory;
@@ -18,6 +20,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 /**
@@ -45,15 +48,15 @@ public class RaffleStrategyTest {
     @Resource
     private IRaffleStock raffleStock;
 
+    @Resource
+    private IRaffleRule raffleRule;
+
     @Before
     public void setUp() {
         // 策略装配 100001、100002、100003
-        //log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100001L));
+        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100001L));
         log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100006L));
 
-        // 通过反射 mock 规则中的值
-        ReflectionTestUtils.setField(ruleWeightLogicChain, "userScore", 4900L);
-        ReflectionTestUtils.setField(ruleLockLogicTreeNode, "userRaffleCount", 10L);
     }
 
     @Test
@@ -92,7 +95,7 @@ public class RaffleStrategyTest {
     public void test_raffle_center_rule_lock() {
         RaffleFactorEntity raffleFactorEntity = RaffleFactorEntity.builder()
                 .userId("panjl")
-                .strategyId(100003L)
+                .strategyId(100006L)
                 .build();
 
         RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(raffleFactorEntity);
@@ -105,6 +108,12 @@ public class RaffleStrategyTest {
     public void test_takeQueueValue() throws InterruptedException {
         StrategyAwardStockKeyVO strategyAwardStockKeyVO = raffleStock.takeQueueValue();
         log.info("测试结果：{}", JSON.toJSONString(strategyAwardStockKeyVO));
+    }
+
+    @Test
+    public void test_raffleRule() {
+        List<RuleWeightVO> ruleWeightVOS = raffleRule.queryAwardRuleWeightByActivityId(100301L);
+        log.info("测试结果：{}", JSON.toJSONString(ruleWeightVOS));
     }
 
 }
